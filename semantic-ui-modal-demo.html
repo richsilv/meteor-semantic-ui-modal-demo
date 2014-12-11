@@ -1,0 +1,49 @@
+<head>
+	<title>semantic-ui-modal-demo</title>
+</head>
+
+<body>
+	<div class="ui page grid">
+		<div class="row"></div>
+		<div class="row">
+			<div class="sixteen wide column">
+				<h2 class="ui header">Welcome to the demo!</h2>
+				<main class="ui three column grid">
+					<section class="column"></section>
+					<section class="ui segment column">{{> buttons}}</section>
+					<section class="column"></section>
+				</main>
+			</div>
+		</div>
+	</div>
+</body>
+
+<template name="buttons">
+	<p>Click for a modal.</p>
+	<button class="ui button" data-action="confirm-modal">Confirm Modal</button>
+	<button class="ui button" data-action="general-modal">General Modal</button>
+</template>
+
+<template name="generalModal">
+	<div class="header">
+		General Modal
+	</div>
+	<div class="content">
+		<div class="ui raised segment">
+			<div class="ui teal ribbon label">
+				How is this different?
+			</div>
+			<p>It's content is determined by an arbitrary Template.</p>
+			<div class="ui teal ribbon label">
+				Does that mean I can use helpers?
+			</div>
+			<p>Yes.  The value of <em>foo</em> is <strong>{{foo}}</strong>.</p>
+			<div class="ui teal ribbon label">
+				And event handlers?
+			</div>
+			<p>That's the main reason this package was made - the process of event handling in modals is slightly painful, so it's been wrapped in 
+			   a package for you.  Give it a go.</p>
+			<button class="ui button">Click me!</button>
+		</div>
+	</div>
+</template>
